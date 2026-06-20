@@ -11,6 +11,13 @@
     --sbold : sbold;
 }
 
+html{
+    overflow-x: hidden;
+}
+body{
+    overflow-x: hidden;
+}
+
 a{
     text-decoration: none;
 }
@@ -2257,6 +2264,17 @@ iframe {
     left: 0;
 }
 
+/* .All_Cta .Cta .Player {
+    position: absolute;
+    left: -52px;
+    top: unset;
+    bottom: -100px;
+    z-index: 1;
+    height: 140%;
+    object-fit: contain;
+    width: 100%;
+} */
+
 }
 
 /* ############################################################################################## */
@@ -2460,6 +2478,22 @@ iframe {
     position: absolute;
    top: 10px;
         left: -20px;
+}
+
+.All_Cta .Cta .Player {
+    position: absolute;
+    left: -52px;
+    top: unset;
+    bottom: -100px;
+    z-index: 1;
+    height: 140%;
+    object-fit: contain;
+    width: 100%;
+}
+
+
+.All_Cta .Cta .content h3 {
+    font-size: 33px;
 }
 
 }
