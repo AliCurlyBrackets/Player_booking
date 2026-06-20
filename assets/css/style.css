@@ -2699,3 +2699,81 @@ iframe {
         display: none;
     }
 }
+
+
+
+    .contact_icon {
+    background-color: rgb(66, 219, 135);
+    color: rgb(255, 255, 255);
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(0px);
+    box-shadow: rgb(66, 219, 135) 0px 0px 0px 0px;
+    font-weight: normal;
+    font-family: sans-serif;
+    border-radius: 50px;
+    animation: 1.25s cubic-bezier(0.66, 0, 0, 1) 0s infinite normal none running pulsing;
+    transition: 300ms ease-in-out;
+    text-decoration: none !important;
+}
+
+
+.floating_btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    margin-inline-start: -200px;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+
+.floating_btn.fly-icon {
+    margin-inline-start: 0px;
+    opacity: 1;
+}
+
+.icon_whatssapp{
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+}
+
+@keyframes pulsing {
+    100% {
+    box-shadow: rgba(232, 76, 61, 0) 0px 0px 0px 30px;
+}
+
+}
+
+
+#scrollTopBtn {
+    position: fixed;
+    bottom: 10px;
+    right: 0;
+    /* width: 48px;
+    height: 48px; */
+    object-fit: contain;
+    cursor: pointer;
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#scrollTopBtn.show {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0);
+}

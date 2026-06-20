@@ -240,6 +240,31 @@
     </div>
 </footer>
 
+<a class="icon_whatssapp" target="_blank" href="https://wa.me/" aria-label="Chat with us on WhatsApp" rel="noopener noreferrer">
+            <div class="contact_icon">
+               <img src="https://hadarah-center.com/wp-content/uploads/2026/04/whatsapp-svgrepo-com.png" width="30" />
+            </div>
+        </a>
+
+        
+        <img src="assets/images/arrow_top.png" alt="scroll to top" id="scrollTopBtn">
+
+        <script>
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+
+window.addEventListener('scroll', function () {
+    if (window.scrollY > 400) {
+        scrollTopBtn.classList.add('show');
+    } else {
+        scrollTopBtn.classList.remove('show');
+    }
+});
+
+scrollTopBtn.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+</script>
+
     <script>
 const soccerSlots=[
   "01:30 - 00:00 ص","03:00 - 01:30 ص","04:30 - 03:00 ص","06:00 - 04:30 ص","07:30 - 06:00 ص","09:00 - 07:30 ص",

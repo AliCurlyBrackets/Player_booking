@@ -258,6 +258,31 @@
     </div>
 </footer>
 
+<a class="icon_whatssapp" target="_blank" href="https://wa.me/" aria-label="Chat with us on WhatsApp" rel="noopener noreferrer">
+            <div class="contact_icon">
+               <img src="https://hadarah-center.com/wp-content/uploads/2026/04/whatsapp-svgrepo-com.png" width="30" />
+            </div>
+        </a>
+
+        
+        <img src="assets/images/arrow_top.png" alt="scroll to top" id="scrollTopBtn">
+
+        <script>
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+
+window.addEventListener('scroll', function () {
+    if (window.scrollY > 400) {
+        scrollTopBtn.classList.add('show');
+    } else {
+        scrollTopBtn.classList.remove('show');
+    }
+});
+
+scrollTopBtn.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+</script>
+
     <script>
 function fqToggle(el){
   const item = el.closest('.fq-item');
