@@ -2336,7 +2336,7 @@ iframe {
     grid-template-columns: repeat(2, 1fr);
 }
 .Featured .Featured_Data .All_Cards .Card {
-    width: 186px;
+    width: auto;
     height: auto;
 }
 .gallery-item,
@@ -2494,6 +2494,11 @@ iframe {
 
 .All_Cta .Cta .content h3 {
     font-size: 33px;
+}
+
+.All_Cta .Cta {
+    margin: 50px auto;
+    overflow: hidden;
 }
 
 }
