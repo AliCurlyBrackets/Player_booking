@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<style>
+    body{
+        background: rgba(253, 254, 254, 1);
+    }
+</style>
+<body>
+
+
+    <section class="header_mobile">
+    <div class="header_mobile_data">
+        <div class="Logo">
+            <img src="assets/images/logo.png" alt="">
+        </div>
+
+        <div class="menu_icon" id="menuIcon" onclick="toggleMenu()">
+            <img src="assets/images/menu.png" alt="menu">
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="menu_overlay" id="menuOverlay" onclick="toggleMenu()"></div>
+
+    <!-- Sidebar Menu -->
+    <div class="sidebar_menu" id="sidebarMenu">
+        <div class="sidebar_header">
+            <div class="sidebar_logo">
+                <img src="assets/images/logo.png" alt="">
+            </div>
+            <div class="sidebar_close" onclick="toggleMenu()">
+                <img src="assets/images/close.png" alt="close">
+            </div>
+        </div>
+
+        <ul class="sidebar_nav">
+            <li><a href="index.html" onclick="toggleMenu()">الرئيسية</a></li>
+            <li><a href="about_play.html" onclick="toggleMenu()">عن الملعب</a></li>
+            <li><a href="bookin.html" onclick="toggleMenu()">حجز الملعب</a></li>
+            <li><a href="contact_us.html" onclick="toggleMenu()">تواصل معنا</a></li>
+        </ul>
+
+        <div class="sidebar_booking">
+            <a href="bookin.html">
+                <span>جــرب الآن وإحجــز معــنــا</span>
+                <img src="assets/images/img_btn.png" alt="">
+            </a>
+        </div>
+    </div>
+</section>
+    
+    <header class="header">
+        
+        <div class="header_data">
+            <div class="Logo">
+                <img src="assets/images/logo.png" alt="">
+        </div>
+
+        <div class="Nav">
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="about_play.html">عن اللعب</a></li>
+                <li><a href="bookin.html">حجز اللعب</a></li>
+                <li><a href="contact_us.html"> تواصل معنا</a></li>
+            </ul>
+        </div>
+
+        <div class="Booking">
+            <a href="bookin.html"> <span> جــرب الآن وإحجــز معــنــا  </span> <img src="assets/images/img_btn.png" alt=""></a>
+        </div>
+
+        </div>
+
+    </header>
+
+
+
+     <section class="Page_title Page_title_Play_Bookin">
+        <h1> احجز ملعبك الآن </h1>
+        <p> اختر التاريخ والوقت المناسب لك </p>
+    </section>
+
+
+    <div class="wrap">
+  <div class="ball-icon">
+    <img src="assets/images/icon_F_G.png" alt="">
+  </div>
+  <h1>إحجز الآن</h1>
+
+  <div class="step-label"><span>اختر نوع الملعب</span><div class="step-num">1</div></div>
+  <div class="venue-tabs">
+    <div class="venue-tab" id="tab-padel" onclick="selectVenue('padel')">
+      <span class="vc-icon"> <img src="assets/images/Padel.png" alt=""> </span>
+      <div class="vc-name">ملعب بادل</div>
+      <div class="TT"><span class="vc-price">20</span><span class="vc-unit"> دولار /ساعة</span></div>
+    </div>
+    <div class="venue-tab active" id="tab-soccer" onclick="selectVenue('soccer')">
+      <span class="vc-icon"> <img src="assets/images/football.png" alt=""> </span>
+      <div class="vc-name">ملعب كـورة</div>
+      <div  class="TT"><span class="vc-price">35</span><span class="vc-unit"> دولار /ساعة ونص</span></div>
+    </div>
+  </div>
+
+  <div class="step-label">
+    <span class="TTT">(الملعب متاح للحجز كل أيام الأسبوع — 24 ساعة)</span>
+    <span>اختر التاريخ</span>
+    <div class="step-num">2</div>
+</div>
+  <div class="date-wrap">
+    <div class="date-input-box">
+      <input type="date" id="dateInput" placeholder="التاريخ">
+      <i class="ti ti-calendar"></i>
+    </div>
+  </div>
+
+  <div class="time-label-row">
+    <span class="hint" id="timeHint">(كل حجز مدته ساعة ونص)</span>
+    <span class="step_title">اختر الوقت</span>
+    <div class="step-num">3</div>
+  </div>
+  <div class="time-grid" id="timesGrid"></div>
+
+  <div class="step-label"><span>معلوماتك</span><div class="step-num">4</div></div>
+  <div class="info-section">
+    <input class="info-input" type="text" placeholder="الاسم">
+    <input class="info-input" type="tel" placeholder="رقم الجوال">
+    <textarea class="info-input" placeholder="ملاحظات إضافية"></textarea>
+  </div>
+    <div class="Booking">
+            <a href="#"> <span> جــرب الآن وإحجــز معــنــا  </span> <img src="assets/images/img_btn.png" alt=""></a>
+        </div>
+</div>
+
+
+<section class="All_Cta">
+    <div class="Cta">
+        <img class="Player" src="assets/images/ct_palyer.png" alt="">
+        <div class="content">
+            <h3> جاهـــز للمبــاراة القادمــة؟</h3>
+            <p> احجز ملعبك الآن واستمتع بأفضل تجربة كرة قدم </p>
+         <a href="" class="Whatsapp"> تواصــل عبـــر الواتســـاب <img src="assets/images/whatsapp.png" alt="">  </a>
+
+         </div>
+    </div>
+</section>
+
+
+    <footer class="footer-wrapper">
+    <table class="footer-table">
+        <colgroup>
+            <col class="col-logo" />
+            <col class="col-main" />
+        </colgroup>
+        <tr>
+            <td class="cell-logo" rowspan="2">
+                <div class="logo-area">
+                    <img style="display: block;margin: 10px auto;" src="assets/images/logo_footer.png" alt="">
+                </div>
+            </td>
+            <td class="cell-nav">
+                <ul class="nav-links">
+                    <ul class="nav-right">
+                        <li><a href="#" class="active">الرئيسية</a></li>
+                        <li><a href="#">عن اللعب</a></li>
+                        <li><a href="#">حجز للعب</a></li>
+                        <li><a href="#">تواصل معنا</a></li>
+                    </ul>
+                    <ul class="nav-left">
+                        <li><a href="#">الاحكام والشروط</a></li>
+                        <li><a href="#">الاسئلة الشائعة</a></li>
+                    </ul>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td style="border: none; padding: 0;">
+                <table style="width:100%; border-collapse:collapse; height:100%;">
+                    <tr>
+                        <td class="cell-social" style="border: none; border-left: 1px solid #b8d8d6; width:50%;">
+                            <div class="social-icons">
+                                <a href="#" class="social-icon" aria-label="Facebook">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                                </a>
+                                <a href="#" class="social-icon" aria-label="Instagram">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                                </a>
+                                <a href="#" class="social-icon" aria-label="WhatsApp">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                                </a>
+                                <a href="#" class="social-icon" aria-label="Email">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                                </a>
+                            </div>
+                        </td>
+                        <td class="cell-copyright" style="border: none; width:50%;">
+                            . جميع الحقوق محفوظة Lanova Arena. 2025
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Mobile Layout -->
+    <div class="footer-mobile">
+        <div class="fm-logo">
+            <img src="assets/images/logo_footer.png" alt="">
+        </div>
+        <ul class="fm-nav">
+            <li><a href="#" class="active">الرئيسية</a></li>
+            <li><a href="#">عن اللعب</a></li>
+            <li><a href="#">حجز للعب</a></li>
+            <li><a href="#">تواصل معنا</a></li>
+            <li><a href="#">الاحكام والشروط</a></li>
+            <li><a href="#">الاسئلة الشائعة</a></li>
+        </ul>
+        <hr class="fm-divider">
+        <div class="social-icons">
+            <a href="#" class="social-icon" aria-label="Facebook">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="Instagram">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="WhatsApp">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="Email">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </a>
+        </div>
+        <div class="fm-copy">. جميع الحقوق محفوظة Lanova Arena. 2025</div>
+    </div>
+</footer>
+
+    <script>
+const soccerSlots=[
+  "01:30 - 00:00 ص","03:00 - 01:30 ص","04:30 - 03:00 ص","06:00 - 04:30 ص","07:30 - 06:00 ص","09:00 - 07:30 ص",
+  "10:30 - 09:00 ص","12:00 - 10:30 ص","01:30 - 12:00 م","03:00 - 01:30 م","04:30 - 03:00 م","06:00 - 04:30 م",
+  "07:30 - 06:00 م","09:00 - 07:30 م","10:30 - 09:00 م","12:00 - 10:30 م"
+];
+const padelSlots=[
+  "01:00 - 00:00 ص","02:00 - 01:00 ص","03:00 - 02:00 ص","04:00 - 03:00 ص","05:00 - 04:00 ص","06:00 - 05:00 ص",
+  "07:00 - 06:00 ص","08:00 - 07:00 ص","09:00 - 08:00 ص","10:00 - 09:00 ص","11:00 - 10:00 ص","12:00 - 11:00 ص",
+  "01:00 - 12:00 م","02:00 - 01:00 م","03:00 - 02:00 م","04:00 - 03:00 م","05:00 - 04:00 م","06:00 - 05:00 م",
+  "07:00 - 06:00 م","08:00 - 07:00 م"
+];
+
+let selected='soccer';
+let activeTime=0;
+
+function renderTimes(){
+  const slots=selected==='soccer'?soccerSlots:padelSlots;
+  const grid=document.getElementById('timesGrid');
+  grid.innerHTML='';
+  slots.forEach((s,i)=>{
+    const b=document.createElement('button');
+    b.className='time-btn'+(i===activeTime?' active':'');
+    b.textContent=s;
+    b.onclick=()=>{activeTime=i;renderTimes();};
+    grid.appendChild(b);
+  });
+  document.getElementById('timeHint').textContent=selected==='soccer'?'(كل حجز مدته ساعة ونص)':'(كل حجز مدته ساعة)';
+  document.getElementById('confirmBtn').textContent=(selected==='soccer'?'⚽':'🏸')+' تأكيد الحجز';
+}
+
+function selectVenue(type){
+  selected=type;
+  activeTime=0;
+  document.getElementById('tab-padel').classList.toggle('active',type==='padel');
+  document.getElementById('tab-soccer').classList.toggle('active',type==='soccer');
+  renderTimes();
+}
+
+renderTimes();
+</script>
+
+<script>
+    function toggleMenu() {
+    const sidebar = document.getElementById('sidebarMenu');
+    const overlay = document.getElementById('menuOverlay');
+
+    sidebar.classList.toggle('open');
+    overlay.classList.toggle('active');
+
+    // منع السكرول لما المنيو مفتوح
+    document.body.style.overflow = sidebar.classList.contains('open') ? 'hidden' : '';
+}
+
+// إغلاق المنيو بزرار Escape
+document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+        const sidebar = document.getElementById('sidebarMenu');
+        const overlay = document.getElementById('menuOverlay');
+        if (sidebar.classList.contains('open')) {
+            sidebar.classList.remove('open');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    }
+});
+</script>
+
+    </body>
+    </html>
