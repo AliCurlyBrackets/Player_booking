@@ -2731,7 +2731,7 @@ iframe {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    z-index: 100000;
+    z-index: 1000;
     margin-inline-start: -200px;
     opacity: 0;
     transition: 0.3s;
@@ -2747,6 +2747,7 @@ iframe {
     position: fixed;
     bottom: 30px;
     left: 30px;
+    z-index:5000;
 }
 
 @keyframes pulsing {
